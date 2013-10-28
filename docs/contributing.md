@@ -6,7 +6,7 @@ next_section: history
 permalink: /docs/contributing/
 ---
 
-So you've got an awesome idea to throw into Jekyll. Great! Please keep the
+So you've got an awesome idea to throw into OECPy. Great! Please keep the
 following in mind:
 
 * If you're creating a small fix or patch to an existing feature, just a simple
@@ -75,7 +75,7 @@ requests directed at another branch will not be accepted.
   <p>
     Both using and hacking on OECPy should be fun, simple, and easy, so if for
     some reason you find it’s a pain, please <a
-    href="{{ site.google_analytics_id }}">create an issue</a> on
+    href="{{ site.github_url }}">create an issue</a> on
     GitHub describing your experience so we can make it better.
   </p>
 </div>
