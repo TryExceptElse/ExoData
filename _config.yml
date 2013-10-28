@@ -2,3 +2,4 @@ pygments: true
 relative_permalinks: false
 google_analytics_id: TODO
 permalink: /news/:year/:month/:day/:title
+github_url: https://github.com/ryanvarley/open-exoplanet-catalogue-python/
