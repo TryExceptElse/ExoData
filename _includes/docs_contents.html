@@ -30,9 +30,15 @@
       <li class="{% if page.title == 'System Object' %}current{% endif %}">
         <a href="{{ site.url }}/docs/system">System Object</a>
       </li>
-      <li>Binary</li>
-      <li>Star</li>
-      <li>Planet</li>
+      <li class="{% if page.title == 'Binary Object' %}current{% endif %}">
+        <a href="{{ site.url }}/docs/binary">Binary Object</a>
+      </li>
+      <li class="{% if page.title == 'Star Object' %}current{% endif %}">
+        <a href="{{ site.url }}/docs/star">Star Object</a>
+      </li>
+      <li class="{% if page.title == 'Planet Object' %}current{% endif %}">
+        <a href="{{ site.url }}/docs/planet">Planet Object</a>
+      </li>
     </ul>
     <h4>Modules</h4>
     <ul>

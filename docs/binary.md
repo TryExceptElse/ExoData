@@ -1,24 +1,18 @@
 ---
 layout: docs
-title: System Object
-prev_section: astro-objects
-next_section: binary
-permalink: /docs/system/
+title: Binary Object
+prev_section: system
+next_section: star
+permalink: /docs/binary/
 ---
 
-The System object is the base of all planet-star systems. It contains the coordinates to the system along with the distance. A full list of methods and variables are given in the table.
+The Binary object can hold star and binay objects. This allows the representation of multiple stars systems accuratly.
 
-<div class="note">
-  <h5>Tip: all values are quanity objects which can be rescaled</h5>
-  <p>
-    Whilst the units given in the table are the default returned, all values are returned as a quantity object with a unit. Changing the unit is then as easy as <code>myvar.rescale(aq.M_s)</code>.<br>
-    <em><a href="../units/">Find out more about units</a></em>
-  </p>
-</div>
+Binaries inheirt variables from the system class and can hold the orbital parameters of the binary.
 
 The table below lists the available <code
 class="option">variables</code> and <code
-class="flag">methods</code> of the System object.
+class="flag">methods</code> of the Binary object.
 
 <div class="mobile-side-scroller">
 <table>
@@ -59,7 +53,7 @@ class="flag">methods</code> of the System object.
     <tr class='setting'>
       <td>
         <p class='name'><strong>Child Stars and Binaries</strong></p>
-        <p class='description'>List of stars and binaries within the system</p>
+        <p class='description'>List of stars and binaries within the binary</p>
       </td>
       <td class="align-center">
         <p><code class="option">.stars</code></p>
