@@ -318,7 +318,7 @@ class BaseDataPerClass(_AstroObjectFigs):
 class DataPerParameterBin(BaseDataPerClass):
     """ Generates Data for planets per parameter bin"""
 
-    def __init__(self, results, planetProperty, binLimits, unit=None, size='small'):
+    def __init__(self, objectList, planetProperty, binLimits, unit=None, size='small'):
         """
         :param planetProperty: property of planet to bin. IE 'e' for eccentricity, 'star.magV' for magV
         :param binLimits: list of bin limits (lower limit, upper, upper, maximum) (note you can have maximum +)
@@ -330,7 +330,7 @@ class DataPerParameterBin(BaseDataPerClass):
         self._planetProperty = planetProperty
 
         self._genKeysBins()  # Generate the bin keys/labels (must do before base class processes results)
-        BaseDataPerClass.__init__(self, results, unit, size)
+        BaseDataPerClass.__init__(self, objectList, unit, size)
 
     def _getSortKey(self, planet):
         """ Takes a planet and turns it into a key to be sorted by
