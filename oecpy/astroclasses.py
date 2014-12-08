@@ -485,7 +485,10 @@ class Planet(StarAndPlanetCommon, PlanetAndBinaryCommon):
         try:
             isTransiting = self.params['istransiting']
         except KeyError:
-            return False
+            if self.R is np.nan:
+                return False
+            else:
+                return True
 
         if isTransiting == '1':
             return True
