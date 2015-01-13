@@ -535,6 +535,15 @@ class Planet(StarAndPlanetCommon, PlanetAndBinaryCommon):
             return molweight
 
     def albedo(self):
+        try:
+            albedo = self.getParam('albedo')
+        except KeyError:
+            albedo = np.nan
+
+        if albedo is not np.nan:
+            return albedo
+
+        # estimate instead
         if self.getParam('temperature') is not np.nan:
             planetClass = self.tempType()
         elif self.M is not np.nan:
