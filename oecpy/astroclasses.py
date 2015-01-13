@@ -991,9 +991,15 @@ class Magnitude(object):
         if lumtype not in ('V', ''):
             raise ValueError("Can only convert for main sequence stars. Got {0} type".format(lumtype))
 
+        if specClass == '':
+            raise ValueError('No Spectral Class given')  # could base on temp? especially if is still V
+
         if to_mag == 'V':
             col, sign = self.column_for_V_conversion[from_mag]
-            offset = float(magDict[specClass][col])
+            try:
+                offset = float(magDict[specClass][col])
+            except KeyError:  # tempory fix for old version, error with key being ''
+                raise ValueError
 
             if math.isnan(offset):
                 raise ValueError('No data available to convert those magnitudes for that spectral type')
@@ -1010,7 +1016,10 @@ class Magnitude(object):
                 raise ValueError('Must give fromVMag, even if it is self.magV')
 
             col, sign = self.column_for_V_conversion[to_mag]
-            offset = float(magDict[specClass][col])
+            try:
+                offset = float(magDict[specClass][col])
+            except KeyError:  # tempory fix for old version, error with key being ''
+                raise ValueError
 
             if math.isnan(offset):
                 raise ValueError('No data available to convert those magnitudes for that spectral type')
