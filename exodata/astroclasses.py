@@ -133,15 +133,15 @@ class System(_BaseObject):
 
     @property
     def x(self):
-        return
+        return math.cos(math.radians(self.ra)) * self.d
 
     @property
     def y(self):
-
+        return math.sin(math.radians(self.ra)) * self.d
 
     @property
     def z(self):
-
+        return math.sin(math.radians(self.dec)) * self.d
 
     @property
     def stars(self):
