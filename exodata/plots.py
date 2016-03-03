@@ -549,6 +549,7 @@ class GeneralPlotter(_AstroObjectFigs):
         :param color: matplotlib color (ie 'r', '#000000')
         """
         # TODO allow a colour set per another variable
+        # accept colors by simple 'red' 'green' 'blue' etc, and rgb val
         self._marker_color = color
         self._edge_color = edgecolor
 

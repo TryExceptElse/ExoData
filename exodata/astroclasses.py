@@ -128,6 +128,22 @@ class System(_BaseObject):
         self.params['distance'] = d
 
     @property
+    def cart(self):
+        return self.x, self.y, self.z
+
+    @property
+    def x(self):
+        return
+
+    @property
+    def y(self):
+
+
+    @property
+    def z(self):
+
+
+    @property
     def stars(self):
         return self.children  # TODO child could be a binary or planet
 
