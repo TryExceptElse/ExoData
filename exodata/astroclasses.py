@@ -111,7 +111,7 @@ class System(_BaseObject):
         self.params['rightascension'] = ra
 
     @property
-    def dec(self):
+    def dec(self):se
         return self.getParam('declination')
 
     @dec.setter
@@ -385,6 +385,10 @@ class StarAndPlanetCommon(_BaseObject):
     @d.setter
     def d(self, d):
         self.parent.d = d
+
+    @property
+    def cart(self):
+        return self.parent.cart
 
     @property
     def x(self):
