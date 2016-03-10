@@ -387,6 +387,18 @@ class StarAndPlanetCommon(_BaseObject):
         self.parent.d = d
 
     @property
+    def x(self):
+        return self.parent.x
+
+    @property
+    def y(self):
+        return self.parent.y
+
+    @property
+    def z(self):
+        return self.parent.z
+
+    @property
     def R(self):
         return self.getParam('radius')
 
