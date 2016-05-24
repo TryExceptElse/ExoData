@@ -111,7 +111,7 @@ class System(_BaseObject):
         self.params['rightascension'] = ra
 
     @property
-    def dec(self):se
+    def dec(self):
         return self.getParam('declination')
 
     @dec.setter
